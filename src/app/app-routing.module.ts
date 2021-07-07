@@ -2,12 +2,17 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {SightsComponent} from './sights/sights.component';
 import {SightsListComponent} from './sights-list/sights-list.component';
+import {FormComponent} from './form/form.component';
+
+
+
 
 const routes: Routes = [
   {path: '', redirectTo: '/sights', pathMatch: 'full'},
   {path: 'sights', component: SightsComponent},
-  {path: 'sights-list', component: SightsListComponent}
-];
+  {path: 'sights-list', component: SightsListComponent},
+  {path: 'add', component: FormComponent}
+ ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

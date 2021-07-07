@@ -1,4 +1,8 @@
 export class Country {
-  name: string;
-  iataCode: string;
+  constructor(
+    public name: string = '',
+    public iataCode: string = ''
+  ) {
+  }
 }
+

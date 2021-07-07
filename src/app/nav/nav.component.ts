@@ -15,6 +15,10 @@ export class NavComponent {
     {
       title: 'MAP',
       path: 'sights'
+    },
+    {
+      title: 'ADD',
+      path: 'add'
     }
   ];
 }

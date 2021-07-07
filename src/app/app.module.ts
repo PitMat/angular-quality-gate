@@ -13,6 +13,9 @@ import {SightsListComponent} from './sights-list/sights-list.component';
 import {SightsComponent} from './sights/sights.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import {FormComponent} from './form/form.component';
+import { SightDetailsComponent } from './sight-details/sight-details.component';
+
 
 
 @NgModule({
@@ -22,6 +25,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     SightsComponent,
     SightsListComponent,
     NavComponent,
+    SightDetailsComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,

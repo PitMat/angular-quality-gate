@@ -5,6 +5,7 @@ import {Observable} from 'rxjs';
 import {environment} from '../../environments/environment';
 import {Country} from '../models/country';
 import {map, tap} from 'rxjs/operators';
+import {Router} from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -13,11 +14,11 @@ export class SightsService {
 
   selectedSight: SightseeingPoint;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
   }
 
   getSights(): Observable<SightseeingPoint[]> {
-     return this.http.get<SightseeingPoint[]>(`${environment.apiUrl}/sights`).pipe(
+    return this.http.get<SightseeingPoint[]>(`${environment.apiUrl}/sights`).pipe(
       tap(console.log),
       map(result => result),
       map(sights => {
@@ -30,12 +31,20 @@ export class SightsService {
             sight.name,
             sight.longitude,
             sight.latitude,
-            country,
             sight.description,
             sight.color
           );
         });
       }),
     );
+  }
+
+  updateSight(sight: SightseeingPoint, id: string): Observable<void> {
+    return this.http.put<void>(`${environment.apiUrl}/sights/${id}`, sight);
+  }
+
+
+  addNewSight(sight: SightseeingPoint): Observable<void> {
+    return this.http.post<void>(`${environment.apiUrl}/sights`, sight);
   }
 }
