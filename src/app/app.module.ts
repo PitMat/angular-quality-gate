@@ -7,10 +7,12 @@ import {MapComponent} from './map/map.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {NgxMapboxGLModule} from 'ngx-mapbox-gl';
 import {environment} from '../environments/environment';
-import {SightsComponent} from './sights/sights.component';
 import {NavComponent} from './nav/nav.component';
 import {HttpClientModule} from '@angular/common/http';
 import {SightsListComponent} from './sights-list/sights-list.component';
+import {SightsComponent} from './sights/sights.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import {SightsListComponent} from './sights-list/sights-list.component';
       accessToken: environment.mapboxToken
     }),
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
