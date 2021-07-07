@@ -18,23 +18,21 @@ export class AddService {
   }
 
 
-  getObject(id: string): Observable<SightseeingPoint> {
-    return this.http.get<SightseeingPoint>(`${environment.apiUrl}/sights/${id}`);
-  }
+  // getPoint(id: string): Observable<SightseeingPoint> {
+  //   return this.http.get<SightseeingPoint>(`${environment.apiUrl}/sights/${id}`);
+  // }
 
-  getObjects(): Observable<SightseeingPoint[]> {
+  getPoints(): Observable<SightseeingPoint[]> {
     return this.http.get<SightseeingPoint[]>(`${environment.apiUrl}/sights`);
   }
 
-  addObject(sight: SightseeingPoint): Observable<SightseeingPoint> {
+  addPoint(sight: SightseeingPoint): Observable<SightseeingPoint> {
     return this.http.post<SightseeingPoint>(`${environment.apiUrl}/sights/`, sight, this.httpOptions);
   }
 
-  editObject(sight: SightseeingPoint,): Observable<any> {
-    return this.http.put(`${environment.apiUrl}/sights`, sight, this.httpOptions);
+  editPoint(sight: SightseeingPoint, id: string): Observable<any> {
+    return this.http.put(`${environment.apiUrl}/sights/${id}`, sight, this.httpOptions);
   }
-
-
 }
 
 

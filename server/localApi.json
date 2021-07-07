@@ -35,6 +35,62 @@
       },
       "description": "This large mound of unknown origin is a popular destination for scenic views of the city.",
       "color": 1
+    },
+    {
+      "name": "LSK",
+      "longitude": 12.32435,
+      "latitude": 12.4352,
+      "description": "dsxgfsfsdfsdf",
+      "color": 1,
+      "id": 4
+    },
+    {
+      "name": "ETH",
+      "longitude": 34.54643,
+      "latitude": 78.45678,
+      "description": " bv fgf",
+      "color": 1,
+      "id": 5
+    },
+    {
+      "name": "ETH",
+      "longitude": 121.2141,
+      "latitude": 12.312,
+      "description": "sdgvxvbdfb2",
+      "color": 2,
+      "id": 6
+    },
+    {
+      "name": "Warsaw",
+      "longitude": 21.0122,
+      "latitude": 52.2297,
+      "description": "Warsaw is the capital and largest city of Poland. The metropolis stands on the Vistula River in east-central Poland",
+      "color": 1,
+      "id": 7
+    },
+    {
+      "name": "Warsaw",
+      "longitude": 21.0122,
+      "latitude": 52.2297,
+      "description": "Warsaw is the capital and largest city of Poland. The metropolis stands on the Vistula River in east-central Poland",
+      "color": 1,
+      "id": 8
+    },
+    {
+      "name": "Warsaw",
+      "longitude": 21.0122,
+      "latitude": 52.2297,
+      "description": "Warsaw is the capital and largest city of Poland. The metropolis stands on the Vistula River in east-central Poland",
+      "color": 1,
+      "id": 9
+    },
+    {
+      "name": "Warsaw",
+      "longitude": 21.0122,
+      "latitude": 52.2297,
+      "description": "Warsaw is the capital and largest city of Poland. The metropolis stands on the Vistula River in east-central Poland",
+      "color": 1,
+      "id": 10
     }
   ]
 }

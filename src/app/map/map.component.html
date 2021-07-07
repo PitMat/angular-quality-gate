@@ -11,7 +11,7 @@
     *ngFor="let sight of sights"
     [lngLat]="[sight.longitude, sight.latitude]"
   >
-    <div class="airport-marker" (click)="selectedSightEvent.emit(sight)">
+    <div class="airport-marker" (click)="selectedSightEvent.emit(sight) ">
       <div class="price">
         {{ sight.name }}
       </div>

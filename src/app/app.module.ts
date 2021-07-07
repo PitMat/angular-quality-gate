@@ -13,8 +13,8 @@ import {SightsListComponent} from './sights-list/sights-list.component';
 import {SightsComponent} from './sights/sights.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {FormComponent} from './form/form.component';
-import { SightDetailsComponent } from './sight-details/sight-details.component';
+import { SightDetailsComponent } from './sight-details-module/sight-details/sight-details.component';
+import {SightDetailsModuleModule} from './sight-details-module/sight-details-module.module';
 
 
 
@@ -25,8 +25,6 @@ import { SightDetailsComponent } from './sight-details/sight-details.component';
     SightsComponent,
     SightsListComponent,
     NavComponent,
-    SightDetailsComponent,
-    FormComponent
   ],
   imports: [
     BrowserModule,
@@ -37,6 +35,7 @@ import { SightDetailsComponent } from './sight-details/sight-details.component';
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    SightDetailsModuleModule,
     NgbModule
   ],
   providers: [],

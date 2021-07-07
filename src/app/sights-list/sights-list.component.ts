@@ -3,7 +3,7 @@ import {SightseeingPoint} from '../models/sightseeing-point';
 import {SightsService} from '../services/sights.service';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {Router} from '@angular/router';
-import {SightDetailsComponent} from '../sight-details/sight-details.component';
+import {SightDetailsComponent} from '../sight-details-module/sight-details/sight-details.component';
 
 @Component({
   selector: 'app-sights-list',
@@ -19,6 +19,10 @@ export class SightsListComponent implements OnInit {
   }
 
   ngOnInit(): void {
+   this.getAllPoints();
+  }
+
+  getAllPoints(): void {
     this.sightsService.getSights().subscribe(sights => {
       this.sights = sights;
     });
@@ -30,7 +34,13 @@ export class SightsListComponent implements OnInit {
 
   }
 
-  editSight(): void {
+  edit(id: string): boolean {
+    this.router.navigate([`edit/:${id}`]).catch(console.error);
+    return false;
+  }
 
+  delete(sight: SightseeingPoint): void {
+    this.sightsService.delete(sight.id).subscribe();
+    this.getAllPoints();
   }
 }
