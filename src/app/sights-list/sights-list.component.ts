@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {SightseeingPoint} from '../models/sightseeing-point';
 import {SightsService} from '../services/sights.service';
 
 @Component({

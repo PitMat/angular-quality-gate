@@ -36,9 +36,6 @@ export class SightsService {
           );
         });
       }),
-      map(sights => {
-        return sights.filter(sight => sight.color);
-      })
     );
   }
 }
